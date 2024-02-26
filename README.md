@@ -225,6 +225,93 @@ Select * from Worker order by FIRST_NAME asc,DEPARTMENT desc;
 |         5 | Vivek      | Bhati     | 500000 | 2021-06-11 09:00:00 | Admin      |
 +-----------+------------+-----------+--------+---------------------+------------+
 ```
+## Q-13. Write an SQL query to print details for Workers with the first names “Vipul” and “Satish” from the Worker table.
 
+```
+select * from worker where first_name in ('vipul', 'satish');
+```
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         6 | Vipul      | Diwan     | 200000 | 2021-06-11 09:00:00 | Account    |
+|         7 | Satish     | Kumar     |  75000 | 2021-01-20 09:00:00 | Account    |
++-----------+------------+-----------+--------+---------------------+------------+
+```
+## Q-14. Write an SQL query to print details of workers excluding first names, “Vipul” and “Satish” from the Worker table.
+
+```
+ Select * from Worker where FIRST_NAME not in ('Vipul','Satish');
+```
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         1 | Monika     | Arora     | 100000 | 2021-02-20 09:00:00 | HR         |
+|         2 | Niharika   | Verma     |  80000 | 2021-06-11 09:00:00 | Admin      |
+|         3 | Vishal     | Singhal   | 300000 | 2021-02-20 09:00:00 | HR         |
+|         4 | Amitabh    | Singh     | 500000 | 2021-02-20 09:00:00 | Admin      |
+|         5 | Vivek      | Bhati     | 500000 | 2021-06-11 09:00:00 | Admin      |
+|         8 | Geetika    | Chauhan   |  90000 | 2021-04-11 09:00:00 | Admin      |
++-----------+------------+-----------+--------+---------------------+------------+
+```
+## Q-15. Write an SQL query to print details of Workers with DEPARTMENT name as “Admin”.
+
+```
+select * from worker where department = 'admin';
+```
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         2 | Niharika   | Verma     |  80000 | 2021-06-11 09:00:00 | Admin      |
+|         4 | Amitabh    | Singh     | 500000 | 2021-02-20 09:00:00 | Admin      |
+|         5 | Vivek      | Bhati     | 500000 | 2021-06-11 09:00:00 | Admin      |
+|         8 | Geetika    | Chauhan   |  90000 | 2021-04-11 09:00:00 | Admin      |
++-----------+------------+-----------+--------+---------------------+------------+
+```
+## Q-16. Write an SQL query to print details of the Workers whose FIRST_NAME contains ‘a’
+
+```
+Select * from Worker where FIRST_NAME like '%a%';
+```
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         1 | Monika     | Arora     | 100000 | 2021-02-20 09:00:00 | HR         |
+|         2 | Niharika   | Verma     |  80000 | 2021-06-11 09:00:00 | Admin      |
+|         3 | Vishal     | Singhal   | 300000 | 2021-02-20 09:00:00 | HR         |
+|         4 | Amitabh    | Singh     | 500000 | 2021-02-20 09:00:00 | Admin      |
+|         7 | Satish     | Kumar     |  75000 | 2021-01-20 09:00:00 | Account    |
+|         8 | Geetika    | Chauhan   |  90000 | 2021-04-11 09:00:00 | Admin      |
++-----------+------------+-----------+--------+---------------------+------------+
+```
+## Q-17. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘a’.
+
+```
+Select * from Worker where FIRST_NAME like '%a';
+```
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         1 | Monika     | Arora     | 100000 | 2021-02-20 09:00:00 | HR         |
+|         2 | Niharika   | Verma     |  80000 | 2021-06-11 09:00:00 | Admin      |
+|         8 | Geetika    | Chauhan   |  90000 | 2021-04-11 09:00:00 | Admin      |
++-----------+------------+-----------+--------+---------------------+------------+
+```
+
+## Q-18. Write an SQL query to print details of the Workers whose FIRST_NAME ends with ‘h’ and contains six alphabets.
+
+```
+Select * from Worker where FIRST_NAME like '_____h';
+```
++-----------+------------+-----------+--------+---------------------+------------+
+| WORKER_ID | FIRST_NAME | LAST_NAME | SALARY | JOINING_DATE        | DEPARTMENT |
++-----------+------------+-----------+--------+---------------------+------------+
+|         7 | Satish     | Kumar     |  75000 | 2021-01-20 09:00:00 | Account    |
++-----------+------------+-----------+--------+---------------------+------------+
+```
 
 
